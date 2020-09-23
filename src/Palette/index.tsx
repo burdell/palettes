@@ -11,7 +11,9 @@ export function Palette({ palette }: { palette: PaletteType }) {
       {colorGroups.map((group) => {
         return (
           <div>
-            <h2>{group.name}</h2>
+            <div>
+              <h2>{group.name}</h2>
+            </div>
             <ColorRow group={group} />
           </div>
         )

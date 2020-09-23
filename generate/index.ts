@@ -1,23 +1,43 @@
 import { resolve } from 'path'
+import { writeFileSync } from 'fs'
 
-import { generateCssFile } from './files'
 import { paletteList } from '../palettes'
+import { PaletteConfig, Palette } from '../src/types'
 
-async function generate() {
-  const paletteName = process.argv[2]
+function writeToFile(data: unknown, dir: string, filename: string) {
+  writeFileSync(resolve(dir, `${filename}`), `${data}`)
+}
 
-  if (!paletteName) {
-    throw new Error('No palette specified')
-  }
+function generateCss(palette: Palette) {
+  const colorGroups = Object.values(palette)
 
+  const cssBuilder: string[] = [':root { ']
+  colorGroups.forEach((group) => {
+    Object.keys(group).forEach((variableName) => {
+      const variableValue = group[variableName]
+      if (variableValue) {
+        cssBuilder.push(`  --${variableName}: ${variableValue};`)
+      }
+    })
+  })
+  cssBuilder.push(' }\n')
+
+  return cssBuilder
+}
+
+export function generateCssFile(paletteConfig: PaletteConfig) {
+  const css = generateCss(paletteConfig.palette)
+  const folder = resolve(__dirname, `output`)
+
+  writeToFile(css.join('\n'), folder, `${paletteConfig.name}.css`)
+}
+
+export async function generate(paletteName: string) {
   const palette = paletteList.find((p) => p.name === paletteName)
-
   if (!palette) {
     throw new Error(`No palette named ${paletteName} found`)
   }
 
   generateCssFile(palette)
-  console.log('✨')
+  console.log(`✨ generated ${paletteName}`)
 }
-
-generate()
