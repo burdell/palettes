@@ -4,15 +4,15 @@ export const scorekeeper: PaletteConfig = {
   name: 'scorebook',
   palette: {
     primary: {
-      primary1: 'hsl(217,55%,12%)',
-      primary2: '',
-      primary3: '',
-      primary4: '',
-      primary5: 'hsl(218,64%,29%)',
-      primary6: '',
-      primary7: '',
-      primary8: '',
-      primary9: 'hsl(217,55%,97%)'
+      primary1: 'hsl(215, 55%, 20%)',
+      primary2: 'hsl(215, 60%, 28%)',
+      primary3: 'hsl(215, 62%, 32%)',
+      primary4: 'hsl(215, 64%, 38%)',
+      primary5: 'hsl(215, 64%, 46%)',
+      primary6: 'hsl(215, 62%, 55%)',
+      primary7: 'hsl(215, 62%, 71%)',
+      primary8: 'hsl(215, 60%, 82%)',
+      primary9: 'hsl(215, 55%, 98%)'
     },
     secondary: {
       secondary1: '',

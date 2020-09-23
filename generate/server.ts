@@ -2,18 +2,20 @@ import express from 'express'
 import cors from 'cors'
 
 import { generate } from './index'
+import { PaletteConfig } from '../frontend/types'
 
 const app = express()
 const port = 9001
 
 app.use(cors())
+app.use(express.json())
 
-app.post('/generate-from-file/:paletteName', async (req, res, next) => {
-  const paletteName = req.params.paletteName
-  if (!paletteName) next(new Error('No palette name given'))
-
+app.post('/generate', async (req, res, next) => {
   try {
-    await generate(paletteName)
+    const palette = req.body as PaletteConfig
+    if (!palette) next(new Error('No palette provided'))
+
+    await generate(palette)
   } catch (e) {
     next(new Error(e.message))
   }

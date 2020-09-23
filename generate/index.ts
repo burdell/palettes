@@ -27,17 +27,12 @@ function generateCss(palette: Palette) {
 
 export function generateCssFile(paletteConfig: PaletteConfig) {
   const css = generateCss(paletteConfig.palette)
-  const folder = resolve(__dirname, `output`)
+  const folder = resolve(__dirname, `../output`)
 
   writeToFile(css.join('\n'), folder, `${paletteConfig.name}.css`)
 }
 
-export async function generate(paletteName: string) {
-  const palette = paletteList.find((p) => p.name === paletteName)
-  if (!palette) {
-    throw new Error(`No palette named ${paletteName} found`)
-  }
-
+export async function generate(palette: PaletteConfig) {
   generateCssFile(palette)
-  console.log(`✨ generated ${paletteName}`)
+  console.log(`✨ generated ${palette.name}`)
 }

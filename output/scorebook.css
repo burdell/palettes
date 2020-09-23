@@ -1,7 +1,13 @@
 :root { 
-  --primary1: hsl(217,55%,12%);
-  --primary5: hsl(218,64%,29%);
-  --primary9: hsl(217,55%,97%);
+  --primary1: hsl(215, 55%, 20%);
+  --primary2: hsl(215, 60%, 28%);
+  --primary3: hsl(215, 62%, 32%);
+  --primary4: hsl(215, 64%, 38%);
+  --primary5: hsl(215, 64%, 46%);
+  --primary6: hsl(215, 62%, 55%);
+  --primary7: hsl(215, 62%, 71%);
+  --primary8: hsl(215, 60%, 82%);
+  --primary9: hsl(215, 55%, 98%);
   --secondary5: hsl(91.3,39.7%,52.5%);
   --tertiary5: hsl(0,88.1%,50.6%);
   --white1: hsl(54, 57%, 87%);
