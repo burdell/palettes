@@ -12,9 +12,7 @@ export function Palette({ palette }: { palette: PaletteType }) {
         return (
           <div>
             <h2>{group.name}</h2>
-            <div>
-              <ColorRow group={group} />
-            </div>
+            <ColorRow group={group} />
           </div>
         )
       })}

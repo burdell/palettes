@@ -1,40 +1,40 @@
 import { PaletteConfig } from '../src/types'
 
 export const scorekeeper: PaletteConfig = {
-  name: 'Scorebook',
+  name: 'scorebook',
   palette: {
     primary: {
-      primary1: 'hsl(206, 48%, 16%)',
-      primary2: 'hsl(206, 49%, 25%)',
-      primary3: 'hsl(206, 50%, 32%)',
-      primary4: 'hsl(206, 51%, 40%)',
-      primary5: 'hsl(206, 52%, 48%)',
-      primary6: 'hsl(206, 51%, 57%)',
-      primary7: 'hsl(206, 50%, 72%)',
-      primary8: 'hsl(206, 49%, 88%)',
-      primary9: 'hsl(206, 48%, 98%)'
+      primary1: '',
+      primary2: '',
+      primary3: '',
+      primary4: '',
+      primary5: 'hsl(217.7,63.5%,29%)',
+      primary6: '',
+      primary7: '',
+      primary8: '',
+      primary9: ''
     },
     secondary: {
-      secondary1: 'hsl(172, 20%, 32%)',
-      secondary2: 'hsl(172, 20%, 40%)',
-      secondary3: 'hsl(172, 24%, 50%)',
-      secondary4: 'hsl(172, 26%, 62%)',
-      secondary5: 'hsl(172, 26%, 65%)',
-      secondary6: 'hsl(172, 23%, 70%)',
-      secondary7: 'hsl(172, 22%, 82%)',
-      secondary8: 'hsl(172, 21%, 89%)',
-      secondary9: 'hsl(172, 20%, 95%)'
+      secondary1: '',
+      secondary2: '',
+      secondary3: '',
+      secondary4: '',
+      secondary5: 'hsl(0,88.1%,50.6%)',
+      secondary6: '',
+      secondary7: '',
+      secondary8: '',
+      secondary9: ''
     },
     tertiary: {
-      tertiary1: 'hsl(14, 50%, 40%)',
-      tertiary2: 'hsl(14, 55%, 49%)',
-      tertiary3: 'hsl(14, 65%, 57%)',
-      tertiary4: 'hsl(14, 71%, 63%)',
-      tertiary5: 'hsl(14, 72%, 68%)',
-      tertiary6: 'hsl(14, 71%, 75%)',
-      tertiary7: 'hsl(14, 68%, 80%)',
-      tertiary8: 'hsl(14, 60%, 88%)',
-      tertiary9: 'hsl(14, 50%, 95%)'
+      tertiary1: '',
+      tertiary2: '',
+      tertiary3: '',
+      tertiary4: '',
+      tertiary5: 'hsl(91.3,39.7%,52.5%)',
+      tertiary6: '',
+      tertiary7: '',
+      tertiary8: '',
+      tertiary9: ''
     },
     white: {
       white1: 'hsl(54, 57%, 87%)',

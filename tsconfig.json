@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "module": "es6",
+    "module": "CommonJS",
     "target": "es5",
     "lib": ["es6", "dom"],
     "allowJs": true,
@@ -10,6 +10,6 @@
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
-  "include": ["src/", "palettes"],
+  "include": ["src/", "palettes", "generate"],
   "exclude": ["node_modules"]
 }

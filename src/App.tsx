@@ -4,9 +4,7 @@ import { paletteList } from '../palettes'
 import { Palette } from './Palette'
 
 export function App() {
-  const [currentPaletteName, setCurrentPaletteName] = useState(
-    paletteList[0].name
-  )
+  const [currentPaletteName, setCurrentPaletteName] = useState('scorebook')
 
   const shownPalette = paletteList.find((p) => p.name === currentPaletteName)
   const availablePalettes = paletteList.map((p) => p.name)

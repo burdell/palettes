@@ -13,23 +13,20 @@ function swatchCss(css: CSSProperties): CSSProperties {
 
 export function ColorRow({ group }: { group: ColorGroup }) {
   return (
-    <div>
-      <div>{group.name}</div>
-      <div style={{ display: 'flex', padding: '1rem 0' }}>
-        {group.colors.map((color, i) => (
-          <div
-            key={i}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center'
-            }}
-          >
-            <div style={swatchCss({ backgroundColor: color.color })} />
-            <div>{color.name}</div>
-          </div>
-        ))}
-      </div>
+    <div style={{ display: 'flex', padding: '1rem 0' }}>
+      {group.colors.map((color, i) => (
+        <div
+          key={i}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <div style={swatchCss({ backgroundColor: color.color })} />
+          <div>{color.name}</div>
+        </div>
+      ))}
     </div>
   )
 }
