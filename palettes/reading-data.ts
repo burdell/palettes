@@ -1,4 +1,4 @@
-import { PaletteConfig } from '../src/types'
+import { PaletteConfig } from '../frontend/types'
 
 export const readingData: PaletteConfig = {
   name: 'Reading Data',

@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { writeFileSync } from 'fs'
 
 import { paletteList } from '../palettes'
-import { PaletteConfig, Palette } from '../src/types'
+import { PaletteConfig, Palette } from '../frontend/types'
 
 function writeToFile(data: unknown, dir: string, filename: string) {
   writeFileSync(resolve(dir, `${filename}`), `${data}`)
